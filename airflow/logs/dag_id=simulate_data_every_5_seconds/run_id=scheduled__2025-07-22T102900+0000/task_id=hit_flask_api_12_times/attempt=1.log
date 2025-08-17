@@ -1,0 +1,12 @@
+[2025-07-22T10:30:16.906+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simulate_data_every_5_seconds.hit_flask_api_12_times scheduled__2025-07-22T10:29:00+00:00 [queued]>
+[2025-07-22T10:30:16.948+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simulate_data_every_5_seconds.hit_flask_api_12_times scheduled__2025-07-22T10:29:00+00:00 [queued]>
+[2025-07-22T10:30:16.950+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-07-22T10:30:17.034+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): hit_flask_api_12_times> on 2025-07-22 10:29:00+00:00
+[2025-07-22T10:30:17.102+0000] {standard_task_runner.py:57} INFO - Started process 2636 to run task
+[2025-07-22T10:30:17.172+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simulate_data_every_5_seconds', 'hit_flask_api_12_times', 'scheduled__2025-07-22T10:29:00+00:00', '--job-id', '68', '--raw', '--subdir', 'DAGS_FOLDER/simulate_data_dag.py', '--cfg-path', '/tmp/tmpdad1gaz7']
+[2025-07-22T10:30:17.205+0000] {standard_task_runner.py:85} INFO - Job 68: Subtask hit_flask_api_12_times
+[2025-07-22T10:30:27.660+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 68 for task hit_flask_api_12_times ((psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 2636)
+[2025-07-22T10:30:29.473+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-07-22T10:30:29.567+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

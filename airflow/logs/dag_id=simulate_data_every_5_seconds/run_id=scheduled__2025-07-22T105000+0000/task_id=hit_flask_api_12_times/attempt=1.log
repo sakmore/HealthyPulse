@@ -1,0 +1,21 @@
+[2025-07-22T10:51:04.109+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: simulate_data_every_5_seconds.hit_flask_api_12_times scheduled__2025-07-22T10:50:00+00:00 [queued]>
+[2025-07-22T10:51:04.149+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: simulate_data_every_5_seconds.hit_flask_api_12_times scheduled__2025-07-22T10:50:00+00:00 [queued]>
+[2025-07-22T10:51:04.151+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-07-22T10:51:04.297+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): hit_flask_api_12_times> on 2025-07-22 10:50:00+00:00
+[2025-07-22T10:51:04.353+0000] {standard_task_runner.py:57} INFO - Started process 2974 to run task
+[2025-07-22T10:51:04.368+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'simulate_data_every_5_seconds', 'hit_flask_api_12_times', 'scheduled__2025-07-22T10:50:00+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/simulate_data_dag.py', '--cfg-path', '/tmp/tmpcfbjds_0']
+[2025-07-22T10:51:04.378+0000] {standard_task_runner.py:85} INFO - Job 96: Subtask hit_flask_api_12_times
+[2025-07-22T10:51:04.548+0000] {task_command.py:416} INFO - Running <TaskInstance: simulate_data_every_5_seconds.hit_flask_api_12_times scheduled__2025-07-22T10:50:00+00:00 [running]> on host 539cb54e78a7
+[2025-07-22T10:51:04.782+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='simulate_data_every_5_seconds' AIRFLOW_CTX_TASK_ID='hit_flask_api_12_times' AIRFLOW_CTX_EXECUTION_DATE='2025-07-22T10:50:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-22T10:50:00+00:00'
+[2025-07-22T10:51:05.990+0000] {logging_mixin.py:154} INFO - Found working URL: http://host.docker.internal:5000
+[2025-07-22T10:53:06.240+0000] {logging_mixin.py:154} INFO - API response: {'data': {'HR': 75, 'SPO2': 90, 'TEMP': 102.7, 'hadm_id': '3d49ab508c58b7a14622eb81075e157505aa65c881f27bae82915b0f9742724c', 'masktype': 0, 'timestamp': '2025-07-22T16:21:06.035276'}, 'message': 'Vitals sent', 'status': 'success'}
+[2025-07-22T10:53:19.761+0000] {logging_mixin.py:154} INFO - API response: {'data': {'HR': 88, 'SPO2': 93, 'TEMP': 97.6, 'hadm_id': '586540138f7cd7fd118a9d8f1bca406b5a3d20188686717d03c96994899b5704', 'masktype': 0, 'timestamp': '2025-07-22T16:23:11.377045'}, 'message': 'Vitals sent', 'status': 'success'}
+[2025-07-22T13:53:31.522+0000] {local_task_job_runner.py:205} ERROR - Heartbeat time limit exceeded!
+[2025-07-22T13:53:32.996+0000] {process_utils.py:131} INFO - Sending 15 to group 2974. PIDs of all processes in the group: [2974]
+[2025-07-22T13:53:33.179+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 2974
+[2025-07-22T13:53:34.066+0000] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-07-22T13:53:36.346+0000] {logging_mixin.py:154} INFO - Error calling Flask API: Task received SIGTERM signal
+[2025-07-22T13:54:33.529+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=2974, name='airflow task ru', status='sleeping', started='10:51:03') did not respond to SIGTERM. Trying SIGKILL
+[2025-07-22T13:54:33.756+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 2974
+[2025-07-22T13:54:33.867+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=2974, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='10:51:03') (2974) terminated with exit code -9
+[2025-07-22T13:54:33.899+0000] {standard_task_runner.py:172} ERROR - Job 96 was killed before it finished (likely due to running out of memory)

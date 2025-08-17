@@ -1,0 +1,71 @@
+[2025-07-22T10:45:12.704+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_consumer_to_postgres.consume_kafka_store_postgres scheduled__2025-07-22T10:40:00+00:00 [queued]>
+[2025-07-22T10:45:12.731+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_consumer_to_postgres.consume_kafka_store_postgres scheduled__2025-07-22T10:40:00+00:00 [queued]>
+[2025-07-22T10:45:12.733+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-07-22T10:45:12.782+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): consume_kafka_store_postgres> on 2025-07-22 10:40:00+00:00
+[2025-07-22T10:45:12.810+0000] {standard_task_runner.py:57} INFO - Started process 2868 to run task
+[2025-07-22T10:45:12.867+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'kafka_consumer_to_postgres', 'consume_kafka_store_postgres', 'scheduled__2025-07-22T10:40:00+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/kafka_consumer_dag.py', '--cfg-path', '/tmp/tmpd474gt2u']
+[2025-07-22T10:45:12.898+0000] {standard_task_runner.py:85} INFO - Job 86: Subtask consume_kafka_store_postgres
+[2025-07-22T10:45:14.104+0000] {task_command.py:416} INFO - Running <TaskInstance: kafka_consumer_to_postgres.consume_kafka_store_postgres scheduled__2025-07-22T10:40:00+00:00 [running]> on host 539cb54e78a7
+[2025-07-22T10:45:14.402+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_consumer_to_postgres' AIRFLOW_CTX_TASK_ID='consume_kafka_store_postgres' AIRFLOW_CTX_EXECUTION_DATE='2025-07-22T10:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-22T10:40:00+00:00'
+[2025-07-22T10:45:14.478+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: connecting to host.docker.internal:9092 [('192.168.65.254', 9092) IPv4]
+[2025-07-22T10:45:14.508+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-07-22T10:45:14.510+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-07-22T10:45:14.513+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: connecting to host.docker.internal:9092 [('fdc4:f303:9324::254', 9092, 0, 0) IPv6]
+[2025-07-22T10:45:14.514+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Connect attempt returned error 101. Disconnecting.
+[2025-07-22T10:45:14.516+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 101 ENETUNREACH
+[2025-07-22T10:45:14.518+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.04 secs
+[2025-07-22T10:45:14.563+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: connecting to host.docker.internal:9092 [('192.168.65.254', 9092) IPv4]
+[2025-07-22T10:45:14.570+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-07-22T10:45:14.571+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-07-22T10:45:14.573+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: connecting to host.docker.internal:9092 [('fdc4:f303:9324::254', 9092, 0, 0) IPv6]
+[2025-07-22T10:45:14.574+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Connect attempt returned error 101. Disconnecting.
+[2025-07-22T10:45:14.575+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 101 ENETUNREACH
+[2025-07-22T10:45:14.577+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.10 secs
+[2025-07-22T10:45:14.684+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: connecting to host.docker.internal:9092 [('192.168.65.254', 9092) IPv4]
+[2025-07-22T10:45:14.691+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-07-22T10:45:14.693+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-07-22T10:45:14.696+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: connecting to host.docker.internal:9092 [('fdc4:f303:9324::254', 9092, 0, 0) IPv6]
+[2025-07-22T10:45:14.698+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Connect attempt returned error 101. Disconnecting.
+[2025-07-22T10:45:14.699+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 101 ENETUNREACH
+[2025-07-22T10:45:14.701+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.20 secs
+[2025-07-22T10:45:14.915+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: connecting to host.docker.internal:9092 [('192.168.65.254', 9092) IPv4]
+[2025-07-22T10:45:14.923+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-07-22T10:45:14.925+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-07-22T10:45:14.927+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: connecting to host.docker.internal:9092 [('fdc4:f303:9324::254', 9092, 0, 0) IPv6]
+[2025-07-22T10:45:14.929+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Connect attempt returned error 101. Disconnecting.
+[2025-07-22T10:45:14.930+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 101 ENETUNREACH
+[2025-07-22T10:45:14.932+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.37 secs
+[2025-07-22T10:45:15.313+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: connecting to host.docker.internal:9092 [('192.168.65.254', 9092) IPv4]
+[2025-07-22T10:45:15.320+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-07-22T10:45:15.322+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-07-22T10:45:15.324+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: connecting to host.docker.internal:9092 [('fdc4:f303:9324::254', 9092, 0, 0) IPv6]
+[2025-07-22T10:45:15.325+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Connect attempt returned error 101. Disconnecting.
+[2025-07-22T10:45:15.326+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 101 ENETUNREACH
+[2025-07-22T10:45:15.327+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.83 secs
+[2025-07-22T10:45:16.169+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: connecting to host.docker.internal:9092 [('192.168.65.254', 9092) IPv4]
+[2025-07-22T10:45:16.180+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-07-22T10:45:16.182+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv4 ('192.168.65.254', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-07-22T10:45:16.183+0000] {conn.py:396} INFO - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: connecting to host.docker.internal:9092 [('fdc4:f303:9324::254', 9092, 0, 0) IPv6]
+[2025-07-22T10:45:16.185+0000] {conn.py:429} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Connect attempt returned error 101. Disconnecting.
+[2025-07-22T10:45:16.186+0000] {conn.py:945} ERROR - <BrokerConnection client_id=kafka-python-2.2.15, node_id=bootstrap-0 host=host.docker.internal:9092 <connecting> [IPv6 ('fdc4:f303:9324::254', 9092, 0, 0)]>: Closing connection. KafkaConnectionError: 101 ENETUNREACH
+[2025-07-22T10:45:16.187+0000] {client_async.py:1049} WARNING - No node available during check_version; sleeping 0.23 secs
+[2025-07-22T10:45:16.416+0000] {logging_mixin.py:154} INFO - Error in consume_and_store: NoBrokersAvailable
+[2025-07-22T10:45:16.417+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kafka_consumer_dag.py", line 10, in consume_and_store
+    consumer = KafkaConsumer(
+  File "/home/airflow/.local/lib/python3.8/site-packages/kafka/consumer/group.py", line 387, in __init__
+    self._client = self.config['kafka_client'](metrics=self._metrics, **self.config)
+  File "/home/airflow/.local/lib/python3.8/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+  File "/home/airflow/.local/lib/python3.8/site-packages/kafka/client_async.py", line 1074, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2025-07-22T10:45:16.470+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=kafka_consumer_to_postgres, task_id=consume_kafka_store_postgres, execution_date=20250722T104000, start_date=20250722T104512, end_date=20250722T104516
+[2025-07-22T10:45:16.530+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 86 for task consume_kafka_store_postgres (NoBrokersAvailable; 2868)
+[2025-07-22T10:45:16.597+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-07-22T10:45:16.660+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

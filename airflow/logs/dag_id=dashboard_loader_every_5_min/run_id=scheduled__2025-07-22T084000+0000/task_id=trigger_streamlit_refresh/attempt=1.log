@@ -1,0 +1,14 @@
+[2025-07-22T08:45:15.342+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dashboard_loader_every_5_min.trigger_streamlit_refresh scheduled__2025-07-22T08:40:00+00:00 [queued]>
+[2025-07-22T08:45:15.363+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dashboard_loader_every_5_min.trigger_streamlit_refresh scheduled__2025-07-22T08:40:00+00:00 [queued]>
+[2025-07-22T08:45:15.365+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-07-22T08:45:15.395+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): trigger_streamlit_refresh> on 2025-07-22 08:40:00+00:00
+[2025-07-22T08:45:15.422+0000] {standard_task_runner.py:57} INFO - Started process 1158 to run task
+[2025-07-22T08:45:15.433+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dashboard_loader_every_5_min', 'trigger_streamlit_refresh', 'scheduled__2025-07-22T08:40:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/dashboard_loader_dag.py', '--cfg-path', '/tmp/tmp9tegxt8s']
+[2025-07-22T08:45:15.445+0000] {standard_task_runner.py:85} INFO - Job 23: Subtask trigger_streamlit_refresh
+[2025-07-22T08:45:15.645+0000] {task_command.py:416} INFO - Running <TaskInstance: dashboard_loader_every_5_min.trigger_streamlit_refresh scheduled__2025-07-22T08:40:00+00:00 [running]> on host 539cb54e78a7
+[2025-07-22T08:45:15.896+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dashboard_loader_every_5_min' AIRFLOW_CTX_TASK_ID='trigger_streamlit_refresh' AIRFLOW_CTX_EXECUTION_DATE='2025-07-22T08:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-22T08:40:00+00:00'
+[2025-07-22T08:45:16.041+0000] {logging_mixin.py:154} INFO - Dashboard refresh failed: HTTPConnectionPool(host='host.docker.internal', port=8501): Max retries exceeded with url: /refresh (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7d4ed01c7ac0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+[2025-07-22T08:45:16.043+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-07-22T08:45:16.081+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=dashboard_loader_every_5_min, task_id=trigger_streamlit_refresh, execution_date=20250722T084000, start_date=20250722T084515, end_date=20250722T084516
+[2025-07-22T08:45:16.170+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-07-22T08:45:16.232+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

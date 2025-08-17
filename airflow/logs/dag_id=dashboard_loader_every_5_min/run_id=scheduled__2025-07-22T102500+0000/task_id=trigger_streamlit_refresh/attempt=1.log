@@ -1,0 +1,12 @@
+[2025-07-22T10:30:16.912+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dashboard_loader_every_5_min.trigger_streamlit_refresh scheduled__2025-07-22T10:25:00+00:00 [queued]>
+[2025-07-22T10:30:16.949+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dashboard_loader_every_5_min.trigger_streamlit_refresh scheduled__2025-07-22T10:25:00+00:00 [queued]>
+[2025-07-22T10:30:16.951+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2025-07-22T10:30:17.037+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): trigger_streamlit_refresh> on 2025-07-22 10:25:00+00:00
+[2025-07-22T10:30:17.083+0000] {standard_task_runner.py:57} INFO - Started process 2635 to run task
+[2025-07-22T10:30:17.104+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dashboard_loader_every_5_min', 'trigger_streamlit_refresh', 'scheduled__2025-07-22T10:25:00+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/dashboard_loader_dag.py', '--cfg-path', '/tmp/tmpev589pg8']
+[2025-07-22T10:30:17.161+0000] {standard_task_runner.py:85} INFO - Job 69: Subtask trigger_streamlit_refresh
+[2025-07-22T10:30:27.653+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 69 for task trigger_streamlit_refresh ((psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8); 2635)
+[2025-07-22T10:30:29.454+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-07-22T10:30:29.562+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
